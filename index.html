@@ -1,0 +1,149 @@
+<!DOCTYPE html>   
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Train Time</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/reset.css" />
+    <script src="assets/trains.js"></script>
+
+        <!-- BootStrap library -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+        <!-- Font Awesome CSS Icons (For cool glyphicons) -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        
+            <!-- jQuery -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+        <!-- Line to Moment.js -->
+        <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+        <!-- firebase -->
+        <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+        
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <title>Atchison Topeka and the Sante Fe</title>
+
+
+</head>
+
+<body>
+  <div id="wrapper">
+<!-- Main Bootstrap Search -->
+    <div class="container">
+
+      <!-- Jumbotron for Title -->
+      <div class="jumbotron" style="background-color: saddlebrown; color: white;">
+        <h1 class="text-center">Anytime is Train Time</h1>
+        <h3 class="text-center">Choo Choo. Chee Chee.</h3>
+      </div>
+    
+      <!-- Row for Current Train Schedule -->
+      <div class="row">
+        <div class="col-sm-12">
+          <!-- First panel is for adding the Current Train Schedule -->
+          <div class="card">
+            <div class="card-header bg-primary text-white">Current Train Schedule</div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-12">
+        <!--Trains Scheduled-->
+                  <table class="table table-sm table-hover" id='trainTable'>
+                    <thead>
+                      <tr>
+                        <th scope="col">Train Name</th>
+                        <th scope="col">Destination</th>
+                        <th scope="col">Frequency (min)</th>
+                        <th scope="col">Next Arrival</th>
+                        <th scope="col">Minutes Away</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                  </table>              
+                </div>
+              </div>              
+            </div>
+          </div>
+        </div>
+      </div>
+    
+        <!-- This row holds all of the second ADDTrain and everything. -->
+      <div class="row">
+        <div class="col-sm-12">
+          <br>
+          <!-- This creates the card that holds all of the adding train stuff -->
+          <div class="card">
+    
+            <!-- Form for adding the train and the needed info-->
+            <div class="card-header bg-primary text-white">Add Train</div>
+    
+            <!--Entry form.-->
+            <!-- This card-body gives it the shape it'll take -->
+              <div class = "card-body">
+                <!-- This role will make the form capabilities work -->
+                <form role = "form">
+                  <div class = "form-group">
+                    <label for = "train-name-input">Train Name</label>
+                    <input class = "form-control" id = "train-name-input" type = "text" required>
+                  </div>
+
+                  <div class = "form-group">
+                    <label for = "destination">Destination</label>
+                    <input class = "form-control" id = "destination" type = "text" required>
+                  </div>
+
+                  <div class = "form-group">
+                    <label for = "destination">First Train Time (HH:mm - military time)</label>
+                    <input class = "form-control" id = "primero" type = "time" required>
+                  </div>
+
+                  <div class = "form-group">
+                    <label for = "destination">Frequency (min)</label>
+                    <input class = "form-control" id = "howOften" type = "number" required>
+                  </div>
+
+                  <!-- Here we have our final submit button -->
+                  <button type="submit" class="btn btn-primary" id="addTrain">Submit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+        <!-- Footer Region -->
+        <div class="row">
+          <div class="col-sm-12">
+    
+            <!-- Line Break followed by closing -->
+            <hr>
+            <h5 class="text-center">
+              <small>Made with lots and lots of
+                <i class="fa fa-heart"></i>
+              </small>
+            </h5>
+    
+          </div>
+        </div>
+    
+      </div>
+
+      <!-- Perhaps here is a spot to put a Modal box if there is something that I need to tell the user. -->
+    
+      <!-- jQuery JS -->
+      <script src="https://code.jquery.com/jquery.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+      <!-- Code to the JavaScript File -->
+      <script src="assets/trains.js"></script>
+    
+    </body>
+    
+
+
+
+    </div>
+</body>
+</html>
