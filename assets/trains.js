@@ -48,10 +48,10 @@ $("#addTrain").on("click", function(event) {
 
   // these should clear the input form, but it may not work as I am expecting on the time and frequency lines.
 
-  // $("#train-name-input").val("");
-  // $("#destination").val("");
-  // $("#primero").empty();
-  // $("#howOften").empty();
+  $("#train-name-input").val("");
+  $("#destination").val("");
+  $("#primero").val("");
+  $("#howOften").val("");
 
   
 
