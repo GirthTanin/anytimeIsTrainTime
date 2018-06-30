@@ -22,7 +22,21 @@
         <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 
         <!-- firebase -->
+
         <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+        <script>
+          // Initialize Firebase
+          var config = {
+            //   how do I protect the apiKey?
+            apiKey: "AIzaSyDaY_v5Av_DAEFUkeELOvs2xBWZsR8qAvw",
+            authDomain: "trains-rushjob.firebaseapp.com",
+            databaseURL: "https://trains-rushjob.firebaseio.com",
+            projectId: "trains-rushjob",
+            storageBucket: "trains-rushjob.appspot.com",
+            messagingSenderId: "464928123166"
+          };
+          firebase.initializeApp(config);
+        </script>
         
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
