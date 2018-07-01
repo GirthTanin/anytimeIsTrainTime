@@ -1,5 +1,4 @@
 # anytimeIsTrainTime
-AJAX Homework
 
 I still find it amazing just how much can be done with feeling I know so little of this.
 Firebase is freaking scary awesome and powerful.
