@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Train Time</title>
+    <title>Atchison Topeka and the Sante Fe</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <link rel="stylesheet" type="text/css" media="screen" href="assets/reset.css" />
@@ -14,14 +14,14 @@
       <!-- Font Awesome CSS Icons (For cool glyphicons) -->
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
    
-      <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-      <title>Atchison Topeka and the Sante Fe</title>
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">  
   </head>
 
   <body>
     <div id="wrapper">
+      <div class="bg" style="background-image:url('audio/Daylight.jpg')">
 <!-- Main Bootstrap Search -->
+<!-- style="background-color: #353638" below if I can get this stuff to work... -->
       <div class="container">
 
       <!-- Jumbotron for Title -->
@@ -96,6 +96,41 @@
 
                   <!-- Here we have our final submit button -->
                   <button type="submit" class="btn btn-primary" id="addTrain">Submit</button>
+                  <!-- Modal Box? -->
+                  <!-- Button trigger modal -->
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                      Train Safety Recomendations
+                    </button>
+                    <img src="assets/audio/SeS.jpg" style= "height: 25%; width: 50%;">
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Your Train is Bound for Glory</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            &middot; Mind the gap. 
+                            <br> &middot; Attention à la marche en descendant du train.
+                            <br> &middot; Tänk på avståndet mellan vagn och plattform när Du stiger av.
+                            <br> &middot; Atención: estación en curva. Al salir, tengan cuidado para no introducir el pie entre coche y andén.
+                            <br> &middot; Bitte beachten Sie beim Aussteigen die Lücke zwischen Zug und Bahnsteigkante
+                            <br> &middot; Attenzione allo spazio tra treno e banchina.
+                            <br> &middot; 電車とホームの間は広く空いておりますので、ご注意下さい
+                            <br> &middot; 請小心空隙及留意月台與車廂地面的高低
+                            <br> &middot;이 역은 타는 곳과 전동차 사이가 넓습니다. 내리실 때 조심하시기 바랍니다
+                            <br> &middot; Seriously, mind the gap.
+                          </div>
+                          <div class="modal-footer"> 
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                </form>
             </div>
           </div>
         </div>
@@ -108,8 +143,8 @@
             <!-- Line Break followed by closing -->
             <hr>
             <h5 class="text-center">
-              <small>Made with lots and lots of
-                <i class="fa fa-heart"></i>
+              <small>Everyone
+                <i class="fa fa-heart"></i>'s the sound of a train in the distance. -Paul Simon
               </small>
             </h5>
     
@@ -117,7 +152,8 @@
         </div>
     
       </div>
-
+    </div>
+  </div>  
       <!-- Perhaps here is a spot to put a Modal box if there is something that I need to tell the user. -->
 
        <!-- firebase -->
@@ -135,11 +171,6 @@
 
       <!-- Code to the JavaScript File -->
       <script src="assets/trains.js"></script>
-    
-    </body>
-    
-
-
 
     </div>
 </body>

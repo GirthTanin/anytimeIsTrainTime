@@ -19,7 +19,8 @@ var nextTrain = null;
 var preordained = null;
 var trainNext = null;
 
-
+var audio = new Audio("assets/audio/SCK5H-remix.mp3");
+// audio.play();
 
 
 $("#addTrain").on("click", function(event) {
@@ -52,6 +53,8 @@ $("#addTrain").on("click", function(event) {
   $("#destination").val("");
   $("#primero").val("");
   $("#howOften").val("");
+
+  audio.play();
 
   
 
