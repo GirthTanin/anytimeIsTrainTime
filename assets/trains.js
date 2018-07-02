@@ -27,7 +27,7 @@ $("#addTrain").on("click", function(event) {
   event.preventDefault();
   var trainID = $("#train-name-input").val().trim();
   var lastStop = $("#destination").val().trim();
-  var engineStart = moment($("#primero").val().trim(), 'hh:mm').format ("X");
+  var engineStart = moment($("#primero").val().trim(), 'HH:mm').format ("X");
   var nextOneComing = $("#howOften").val().trim();
 
   var newLine = {
@@ -78,11 +78,11 @@ database.ref().on("child_added", function(childSnapshot) {
   // calculate the time for the next train
   // frequency variable needs to be up at the top here.
   var trainNext = $("#howOften");
-  var preordained = moment(trainStarts, "hh:mm").subtract(1, "years");
+  var preordained = moment(trainStarts, "HH:mm").subtract(1, "years");
   console.log(preordained);
   // have computer recognise what time it is...
   var currentTime = moment();
-  console.log("current time: " + moment(currentTime).format("hh:mm"));
+  console.log("current time: " + moment(currentTime).format("HH:mm"));
   //Difference between the times...
   var diffTime = moment().diff(moment(preordained), "minutes");
   console.log("difference in time: " + diffTime);
@@ -94,7 +94,7 @@ database.ref().on("child_added", function(childSnapshot) {
   console.log("minutes until train " + countDown);
   
   var nextTrain = moment().add(countDown, "minutes");
-  var nextTrainB = ("arrival time: " + moment(nextTrain).format('hh:mm'));
+  var nextTrainB = ("arrival time: " + moment(nextTrain).format('HH:mm'));
 
   
 
